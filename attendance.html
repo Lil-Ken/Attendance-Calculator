@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance</title>
+    <link rel="stylesheet" href="attendance.css">
+</head>
+<body>
+    <h1 id="title">Attendance Calculator</h1>
+    <form id="input">
+        <div id="info">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="week">number of weeks (full week)</label>
+            <input type="number" id="week" required>
+
+            <label for="courseName">name of course</label>
+            <input type="text" id="courseName" required>
+
+            <label for="selPractical">Practical</label>
+            <input type="checkbox" id="selPractical" name="prac-tuto"> 
+            <label for="selTutorial">Tutorial</label>
+            <input type="checkbox" id="selTutorial" name="prac-tuto"> 
+        </div>
+        <div id="lecture">
+            <h2>Lecture</h2>
+            <label for="lecDuration">duration (hours)</label>
+            <input type="number" id="lecDuration" required>
+
+            <label for="numLecAttended">The number of times you've attended</label>
+            <input type="number" id="numLecAttended" required>
+        </div>
+
+        <div id="practical">
+            <h2>Practical</h2>
+            <label for="pracDuration">duration (hours)</label>
+            <input type="number" id="pracDuration" required>
+
+            <label for="numPracAttended">The number of times you've attended</label>
+            <input type="number" id="numPracAttended" required>
+        </div>
+        <div id="tutorial">
+            <h2>tutorial</h2>
+            <label for="tutDuration">duration (hours)</label>
+            <input type="number" id="tutDuration" required>
+
+            <label for="numTutAttended">The number of times you've attended</label>
+            <input type="number" id="numTutAttended" required>
+        </div>
+    </form>
+    <br>
+    <button id="calculate-btn">Calculate</button><br>
+    <div id="display">
+
+    </div>
+    <script src="attendance.js"></script>
+</body>
+</html>
