@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1 class="title">Attendance Calculator</h1>
-    <form id="input">
+    <div id="input">
         <div id="info">
             <label for="name">Your Name</label>
             <input type="text" id="name" name="name" required>
@@ -21,28 +21,32 @@
             <input type="text" id="courseName" required>
 
             <div id="selection">
-                <input type="checkbox" id="selLecture" name="selection"> 
-                <label for="selLecture">Lecture</label>
-
-                <input type="checkbox" id="selPractical" name="selection"> 
-                <label for="selPractical">Practical</label>
-
-                <input type="checkbox" id="selTutorial" name="selection"> 
-                <label for="selTutorial">Tutorial</label>
+                <div>
+                    <input type="checkbox" id="selLecture" name="selection"> 
+                    <label for="selLecture">Lecture</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="selPractical" name="selection"> 
+                    <label for="selPractical">Practical</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="selTutorial" name="selection"> 
+                    <label for="selTutorial">Tutorial</label>
+                </div>
             </div>
         </div>
 
         <div id="addLecture"></div>
         <div id="addPractical"></div>
         <div id="addTutorial"></div>
-
+        
         <button id="calculate-btn">Calculate</button><br>
-    </form>
+    </div>
+    
     <footer id="footer">
         <div>Developer: KEN</div> 
         <div>Consultant: Chao Ze</div>
     </footer>
-    <div id="test"></div>
 
     <script src="attendance.js"></script>
 </body>
