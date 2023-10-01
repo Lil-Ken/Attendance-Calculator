@@ -8,7 +8,8 @@
 body {
     font-family: Arial, sans-serif;
     color: #f5fffa;
-    background: linear-gradient(#ff90a5, #ffa3b5, #ffb6be, #ffb7d7, #ffcbd5);
+    background: linear-gradient(#ff9eb0bb,#ffcbd5, #ffb7d7, #ff9eb0bb);
+    overflow-y: scroll;
 }
 
 html, 
@@ -18,6 +19,7 @@ body {
     width: 100%;
     height: 100%;
 }
+
 
 .title {
     text-align: center;
@@ -53,17 +55,21 @@ input[type="checkbox"] {
 
 #selection{
     padding: 10px 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #selection label{
-    display: inline-block;
     padding-left: 5px;
+    display: inline-block;
 }
 
-#selection label:nth-of-type(2){
-    margin-left: 230px;
-    margin-right: 230px;
+#selection > div{
+    flex: 1;
+    text-align: center;
 }
+
 
 #selLecture,
 #selPractical,
@@ -73,9 +79,6 @@ input[type="checkbox"] {
     height: 25px;
     position: relative;
     top: 3.6px;
-}
-#selPractical{
-    left: 230px;
 }
 
 
@@ -103,6 +106,7 @@ input[type="checkbox"] {
     min-width: 300px;
     display: block;
     margin: auto;
+    margin-bottom: 26px;
 }
 
 #calculate-btn:hover,
@@ -111,23 +115,24 @@ input[type="checkbox"] {
     color: #e73895;
 } 
 
-form{
+#input{
     display: block;
-    max-width: 900px;
-    min-width: 400px;
+    max-width: 65%;
+    min-width: 720px;
     margin: auto;
 }
 
 #display {
     display: block;
-    max-width: 800px;
-    min-width: 400px;
+    max-width: 60%;
+    min-width: 600px;
     margin: auto;
     background-color: #40404099;
     padding: 20px;
-    border-radius: 5px;
+    padding-bottom: 1px;
+    border-radius: 6px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-    margin-bottom: 20px;
+    margin-top: 13%;
 }
 
 #display a{
@@ -166,10 +171,69 @@ form{
     width: 100%;
     position: fixed;
     bottom: 0px;
+    flex-shrink: 0;
 }
 #footer div{
     display: inline-block;
     margin: 0px 30px;
     position: relative;
     left: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 20px;
+    }
+    .title {
+        font-size: 40px;
+        margin-bottom: 10px;
+        padding-top: 5px;
+    }
+    .title:first-of-type{
+        min-width: 400px;
+    }
+    label {
+        font-size: 18px;
+    }
+    input[type="text"],
+    input[type="number"],
+    input[type="checkbox"] {
+        font-size: 18px;
+        padding: 8px;
+    }
+    #selection label:nth-of-type(2) {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    #selLecture,
+    #selPractical,
+    #selTutorial {
+        width: 20px;
+        height: 20px;
+        top: 2px;
+    }
+    #calculate-btn,
+    #back-btn {
+        font-size: 25px;
+        min-width: 200px;
+        padding: 8px 16px;
+        margin: 10px auto;
+    }
+    #display {
+        padding: 15px;
+    }
+    #footer {
+        font-size: 18px;
+        padding: 2px;
+    }
+    #footer div {
+        margin: 0px 10px;
+        left: 0px;
+    }
+
+    #input{
+        min-width: 400px;
+        max-width: 80%;
+        margin: auto;
+    }
 }
