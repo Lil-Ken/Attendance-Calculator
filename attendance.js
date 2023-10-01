@@ -89,28 +89,37 @@ class Tutorial extends Student{
     }
 }
 
-document.getElementById("calculate-btn").onclick = () => {
 
+document.getElementById("calculate-btn").onclick = () => {
     const student1 = new Student(
         document.getElementById("name").value, 
         document.getElementById("week").value, 
         document.getElementById("courseName").value
     );
+
+    let lecture1;
+    if(lecOccur === 1){
+        lecture1 = new Lecture(
+            document.getElementById("lecDuration").value,
+            document.getElementById("numLecAttended").value
+        );
+    } else lecture1 = new Lecture(0, 0);
     
-    const lecture1 = new Lecture(
-        document.getElementById("lecDuration").value,  
-        document.getElementById("numLecAttended").value
-    );
-    
-    const practical1 = new Practical(
-        document.getElementById("pracDuration").value, 
-        document.getElementById("numPracAttended").value
-    );
-    
-    const tutorial1 = new Tutorial(
-        document.getElementById("tutDuration").value,
-        document.getElementById("numTutAttended").value
-    );
+    let practical1;
+    if(pracOccur === 1){
+        practical1 = new Practical(
+            document.getElementById("pracDuration").value, 
+            document.getElementById("numPracAttended").value
+        );
+    } else practical1 = new Practical(0, 0);
+
+    let tutorial1;
+    if(tutOccur === 1){ 
+        tutorial1 = new Tutorial(
+            document.getElementById("tutDuration").value,
+            document.getElementById("numTutAttended").value
+        );
+    } else tutorial1 = new Tutorial(0, 0);
 
     function calCurrentAllDuration(){
         lecture1.currentTime = student1.weeks * lecture1.duration;
@@ -134,29 +143,27 @@ document.getElementById("calculate-btn").onclick = () => {
     calAllPresentDuration();
     calAttendance();
 
-    let redAttendance = attendance;
     if (attendance.toFixed(2) < 80)
-        redAttendance = `<span style= "red">${attendance.toFixed(2)}%</span>`
-    
+        attendance = `<span style= "color: #ff0800">${attendance.toFixed(2)}%</span>`
+    else attendance = `${attendance.toFixed(2)}%`
     
     document.body.innerHTML = `
         <div id= "display">
             <ul id="list">
                 <li><b>name:</b> ${student1.name}</li>
                 <li><b>Course name:</b> ${student1.courseName}</li>
-                <p>Your attendance is ${redAttendance}</p>
+                <p>Your attendance is ${attendance}</p>
             </ul>
             <a href= ""><button id="back-btn">BACK</button></a>
         </div>
         <footer id="footer">
-            <div>make by: KEN</div> 
-            <div>color consultant: Chao Ze</div>
+            <div>Developer: KEN</div> 
+            <div>Consultant: Chao Ze</div>
         </footer>
     `;
-    console.log(document.getElementById("name").value);
 }
 
-// console.log(student1);
-// console.log(lecture1);
-// console.log(practical1);
-// console.log(tutorial1);
+// // console.log(student1);
+// // console.log(lecture1);
+// // console.log(practical1);
+// // console.log(tutorial1);
