@@ -17,7 +17,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100%;
+    height: 80%;
 }
 
 
@@ -26,7 +26,8 @@ body {
     font-size: 50px;
     margin-bottom: 15px;
 }
-.title:first-of-type{
+
+h1.title{
     padding-top: 10px;
 }
 
@@ -132,7 +133,7 @@ input[type="checkbox"] {
     padding-bottom: 1px;
     border-radius: 6px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-    margin-top: 13%;
+    margin-top: 15%;
 }
 
 #display a{
@@ -172,6 +173,7 @@ input[type="checkbox"] {
     position: fixed;
     bottom: 0px;
     flex-shrink: 0;
+    background: #ffe2e799;
 }
 #footer div{
     display: inline-block;
@@ -181,18 +183,30 @@ input[type="checkbox"] {
 }
 
 @media screen and (max-width: 768px) {
+    html, 
     body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 80%;
         font-size: 20px;
+
     }
-    .title {
-        font-size: 150%;
-        margin-bottom: 10px;
-        padding-top: 5px;
-    }
-    .title:first-of-type{
+
+    h1.title{
         min-width: 320px;
         max-width: 110%;
+        margin: 10px 0px;
+        font-size: 170%;
     }
+
+    h2.title{
+        width: 100%;
+        font-size: 35px;
+        padding: 0px;
+        margin: 0px;
+    }
+
     label {
         font-size: 18px;
     }
@@ -206,6 +220,11 @@ input[type="checkbox"] {
         margin-left: 15px;
         margin-right: 15px;
     }
+
+    #selection div{
+        max-width: 96px;
+    }
+
     #selLecture,
     #selPractical,
     #selTutorial {
@@ -218,14 +237,14 @@ input[type="checkbox"] {
         font-size: 25px;
         min-width: 200px;
         padding: 8px 16px;
-        margin: 10px auto;
+        margin: 40px auto;
     }
     #display {
         padding: 15px;
         min-width: 200px;
         max-width: 80%;
         margin: auto;
-        margin-top: 13%;
+        margin-top: 40%;
     }
 
     #list{
