@@ -6,23 +6,26 @@
 }
 
 body {
-    background-color: #2a2b2e;
+    background: #ffb6be;
     font-family: Arial, sans-serif;
     padding: 20px;
     color: #fff;
+    height: 480vh;
 }
 
-#title {
+
+.title {
     text-align: center;
     font-size: 24px;
     margin-bottom: 20px;
 }
 
+
 #info {
     background-color: #40404099;
-    padding: 20px;
+    padding: 20px 20px 0px 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     margin-bottom: 20px;
 }
 
@@ -41,10 +44,14 @@ input[type="checkbox"] {
     border-radius: 3px;
 }
 
+#selLecture,
 #selPractical,
 #selTutorial{
     display: inline-block;
     width: 58px;
+    position: relative;
+    left: 12%;
+    bottom: 21px;
 }
 
 #lecture,
@@ -53,24 +60,52 @@ input[type="checkbox"] {
     background-color: #40404099;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     margin-bottom: 20px;
 
 }
 
 #calculate-btn {
-    background-color: #3a3b3c;
+    background-color: #3a3b3caa;
     color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 3px;
     cursor: pointer;
     font-size: 16px;
+    position: absolute;
+    bottom: -2%;
+    left: 37%;
 }
 
 #calculate-btn:hover {
-    background-color: #404040;
-    color: greenyellow;
+    background-color: #404040dd;
+    color: #e73895;
 } 
 
- 
+form{
+    display: block;
+    max-width: 500px;
+    min-width: 400px;
+    position: absolute;
+    right: 20%;
+    left: 20%;
+}
+
+#display {
+    background-color: #40404099;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: block;
+    max-width: 500px;
+    min-width: 400px;
+    position: absolute;
+    right: 20%;
+    left: 20%;
+}
+
+.clicked{
+    height: 200vh;
+}
