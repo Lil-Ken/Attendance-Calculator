@@ -151,7 +151,7 @@ document.getElementById("calculate-btn").onclick = () => {
         <div id= "display">
             <ul id="list">
                 <li><b>name:</b> ${student1.name}</li>
-                <li><b>Course name:</b> ${student1.courseName}</li>
+                <li><b>Subject name:</b> ${student1.courseName}</li>
                 <p>Your attendance is ${attendance}</p>
             </ul>
             <a href= ""><button id="back-btn">BACK</button></a>
