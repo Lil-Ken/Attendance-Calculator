@@ -78,13 +78,19 @@ document.getElementById("calculate-btn").onclick = () => {
     calCurrentAllDuration();
     calAllPresentDuration();
     calAttendance();
+
+    let redAttendance = attendance;
+    if (attendance.toFixed(2) < 80)
+        redAttendance = `<span style= "red">${attendance.toFixed(2)}%</span>`
     
-    document.getElementById("display").innerHTML = `
-        <div>
+    
+    document.body.innerHTML = `
+        <div id= "display">
             <ul id="list">
                 <li><b>name:</b> ${student1.name}</li>
                 <li><b>Course name:</b> ${student1.courseName}</li>
-                <p>Your attendance is ${attendance.toFixed(2)}%</p>
+                <p>Your attendance is ${redAttendance}</p>
+
             </ul>
         </div>
     `;
