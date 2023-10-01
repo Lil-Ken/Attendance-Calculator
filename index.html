@@ -19,41 +19,29 @@
             <label for="courseName">Name of Subject</label>
             <input type="text" id="courseName" required>
 
-            <label for="selLecture">Lecture</label>
-            <input type="checkbox" id="selLecture" name="selection"> 
-            <label for="selPractical">Practical</label>
-            <input type="checkbox" id="selPractical" name="selection"> 
-            <label for="selTutorial">Tutorial</label>
-            <input type="checkbox" id="selTutorial" name="selection"> 
-        </div>
-        <div id="lecture">
-            <h2 class="title">Lecture</h2>
-            <label for="lecDuration">duration (hours)</label>
-            <input type="number" id="lecDuration" required>
+            <div id="selection">
+                <input type="checkbox" id="selLecture" name="selection"> 
+                <label for="selLecture">Lecture</label>
 
-            <label for="numLecAttended">The number of times you've attended</label>
-            <input type="number" id="numLecAttended" required>
+                <input type="checkbox" id="selPractical" name="selection"> 
+                <label for="selPractical">Practical</label>
+
+                <input type="checkbox" id="selTutorial" name="selection"> 
+                <label for="selTutorial">Tutorial</label>
+            </div>
         </div>
 
-        <div id="practical">
-            <h2 class="title">Practical</h2>
-            <label for="pracDuration">duration (hours)</label>
-            <input type="number" id="pracDuration" required>
+        <div id="addLecture"></div>
+        <div id="addPractical"></div>
+        <div id="addTutorial"></div>
 
-            <label for="numPracAttended">The number of times you've attended</label>
-            <input type="number" id="numPracAttended" required>
-        </div>
-        <div id="tutorial">
-            <h2 class="title">tutorial</h2>
-            <label for="tutDuration">duration (hours)</label>
-            <input type="number" id="tutDuration" required>
-
-            <label for="numTutAttended">The number of times you've attended</label>
-            <input type="number" id="numTutAttended" required>
-        </div>
         <button id="calculate-btn">Calculate</button><br>
     </form>
-    <br>
+    <footer id="footer">
+        <div>make by: KEN</div> 
+        <div>color consultant: Chao Ze</div>
+    </footer>
+    <div id="test"></div>
 
     <script src="attendance.js"></script>
 </body>
