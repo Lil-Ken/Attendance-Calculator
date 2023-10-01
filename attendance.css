@@ -3,23 +3,30 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 25px;
 }
-
 body {
-    background: #ffb6be;
     font-family: Arial, sans-serif;
-    padding: 20px;
-    color: #fff;
-    height: 480vh;
+    color: #f5fffa;
+    background: linear-gradient(#ff90a5, #ffa3b5, #ffb6be, #ffb7d7, #ffcbd5);
 }
 
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
 
 .title {
     text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 50px;
+    margin-bottom: 15px;
 }
-
+.title:first-of-type{
+    padding-top: 10px;
+}
 
 #info {
     background-color: #40404099;
@@ -44,15 +51,33 @@ input[type="checkbox"] {
     border-radius: 3px;
 }
 
+#selection{
+    padding: 10px 0px 20px;
+}
+
+#selection label{
+    display: inline-block;
+    padding-left: 5px;
+}
+
+#selection label:nth-of-type(2){
+    margin-left: 230px;
+    margin-right: 230px;
+}
+
 #selLecture,
 #selPractical,
 #selTutorial{
     display: inline-block;
-    width: 58px;
+    width: 25px;
+    height: 25px;
     position: relative;
-    left: 12%;
-    bottom: 21px;
+    top: 3.6px;
 }
+#selPractical{
+    left: 230px;
+}
+
 
 #lecture,
 #practical,
@@ -65,47 +90,86 @@ input[type="checkbox"] {
 
 }
 
-#calculate-btn {
+#calculate-btn,
+#back-btn {
     background-color: #3a3b3caa;
-    color: #fff;
+    color: #f5fffa;
     padding: 10px 20px;
     border: none;
-    border-radius: 3px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-    position: absolute;
-    bottom: -2%;
-    left: 37%;
+    font-size: 30px;
+    text-align: center;
+    min-width: 300px;
+    display: block;
+    margin: auto;
 }
 
-#calculate-btn:hover {
+#calculate-btn:hover,
+#back-btn:hover {
     background-color: #404040dd;
     color: #e73895;
 } 
 
 form{
     display: block;
-    max-width: 500px;
+    max-width: 900px;
     min-width: 400px;
-    position: absolute;
-    right: 20%;
-    left: 20%;
+    margin: auto;
 }
 
 #display {
+    display: block;
+    max-width: 800px;
+    min-width: 400px;
+    margin: auto;
     background-color: #40404099;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     margin-bottom: 20px;
-    display: block;
-    max-width: 500px;
-    min-width: 400px;
-    position: absolute;
-    right: 20%;
-    left: 20%;
+}
+
+#display a{
+    text-decoration: none;
+}
+
+#list{
+    list-style: none;
+    margin-bottom: 20px;
 }
 
 .clicked{
     height: 200vh;
+}
+
+#info:hover,
+#lecture:hover,
+#practical:hover,
+#tutorial:hover,
+#display:hover{
+    background-color: #404040dd;
+    color: #ff849c;
+    .title{
+        color: #f5fffa;
+    }
+}
+
+#footer{
+    text-align: center;
+    color: black;
+    border: solid 1px black;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    padding: 5px;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+}
+#footer div{
+    display: inline-block;
+    margin: 0px 30px;
+    position: relative;
+    left: 30px;
 }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance</title>
+    <link rel="stylesheet" href="attendance.css">
+</head>
+<body>
+    <h1 class="title">Attendance Calculator</h1>
+    <form id="input">
+        <div id="info">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="week">Current Semester Week</label>
+            <input type="number" id="week" required>
+
+            <label for="courseName">Name of Subject</label>
+            <input type="text" id="courseName" required>
+
+            <div id="selection">
+                <input type="checkbox" id="selLecture" name="selection"> 
+                <label for="selLecture">Lecture</label>
+
+                <input type="checkbox" id="selPractical" name="selection"> 
+                <label for="selPractical">Practical</label>
+
+                <input type="checkbox" id="selTutorial" name="selection"> 
+                <label for="selTutorial">Tutorial</label>
+            </div>
+        </div>
+
+        <div id="addLecture"></div>
+        <div id="addPractical"></div>
+        <div id="addTutorial"></div>
+
+        <button id="calculate-btn">Calculate</button><br>
+    </form>
+    <footer id="footer">
+        <div>make by: KEN</div> 
+        <div>color consultant: Chao Ze</div>
+    </footer>
+    <div id="test"></div>
+
+    <script src="attendance.js"></script>
+</body>
+</html>

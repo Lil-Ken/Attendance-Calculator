@@ -1,6 +1,61 @@
 let allPresentTime = 0, allCurrentTime = 0, attendance, numAttended = 0;
 let lecPresentTime, praPresentTime, tutPresentTime;
-// let lecture1, practical1, tutorial1;
+let lecOccur = 0, pracOccur = 0, tutOccur = 0;
+
+document.getElementById("selLecture").onclick = () => {
+    if(lecOccur === 0){
+        document.getElementById("addLecture").innerHTML = `
+            <div id="lecture">
+                <h2 class="title">Lecture</h2>
+                <label for="lecDuration">Duration of a class (hours)</label>
+                <input type="number" id="lecDuration" required>
+
+                <label for="numLecAttended">The number of attended</label>
+                <input type="number" id="numLecAttended" required>
+            </div>`;
+        lecOccur = 1;
+    }else if (lecOccur === 1){
+        document.getElementById("addLecture").innerHTML = null;
+        lecOccur = 0;
+    }
+}
+
+document.getElementById("selPractical").onclick = () => {
+    if(pracOccur === 0){
+        document.getElementById("addPractical").innerHTML = `
+            <div id="practical">
+                <h2 class="title">Practical</h2>
+                <label for="pracDuration">Duration of a class (hours)</label>
+                <input type="number" id="pracDuration" required>
+
+                <label for="numPracAttended">The number of attended</label>
+                <input type="number" id="numPracAttended" required>
+            </div>`;
+        pracOccur = 1;
+    }else if (pracOccur === 1){
+        document.getElementById("addPractical").innerHTML = null;
+        pracOccur = 0;
+    }
+}
+
+document.getElementById("selTutorial").onclick = () => {
+    if(tutOccur === 0){
+        document.getElementById("addTutorial").innerHTML = `
+            <div id="tutorial">
+                <h2 class="title">Tutorial</h2>
+                <label for="tutDuration">Duration of a class (hours)</label>
+                <input type="number" id="tutDuration" required>
+
+                <label for="numTutAttended">The number of attended</label>
+                <input type="number" id="numTutAttended" required>
+            </div>`;
+            tutOccur = 1;
+    }else if (tutOccur === 1){
+        document.getElementById("addTutorial").innerHTML = null;
+        tutOccur = 0;
+    }
+}
+
 class Student{
     constructor(name, weeks, courseName){
         this.name = name;
@@ -90,9 +145,13 @@ document.getElementById("calculate-btn").onclick = () => {
                 <li><b>name:</b> ${student1.name}</li>
                 <li><b>Course name:</b> ${student1.courseName}</li>
                 <p>Your attendance is ${redAttendance}</p>
-
             </ul>
+            <a href= ""><button id="back-btn">BACK</button></a>
         </div>
+        <footer id="footer">
+            <div>make by: KEN</div> 
+            <div>color consultant: Chao Ze</div>
+        </footer>
     `;
     console.log(document.getElementById("name").value);
 }
