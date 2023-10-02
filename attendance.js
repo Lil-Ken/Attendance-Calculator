@@ -145,7 +145,7 @@ document.getElementById("calculate-btn").onclick = () => {
 
     if (attendance.toFixed(2) < 80)
         attendance = `<span style= "color: #ff0800">${attendance.toFixed(2)}%</span>`
-    else attendance = `${attendance.toFixed(2)}%`
+    else attendance = `<span style= "color: #8add43">${attendance.toFixed(2)}%`
     
     document.body.innerHTML = `
         <div id= "display">
@@ -162,8 +162,3 @@ document.getElementById("calculate-btn").onclick = () => {
         </footer>
     `;
 }
-
-// // console.log(student1);
-// // console.log(lecture1);
-// // console.log(practical1);
-// // console.log(tutorial1);
