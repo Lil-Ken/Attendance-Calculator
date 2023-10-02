@@ -153,6 +153,7 @@ document.getElementById("calculate-btn").onclick = () => {
                 <li><b>name:</b> ${student1.name}</li>
                 <li><b>Subject name:</b> ${student1.courseName}</li>
                 <p>Your attendance is ${attendance}</p>
+                <p>this ugly design is modifying</p>
             </ul>
             <a href= ""><button id="back-btn">BACK</button></a>
         </div>
