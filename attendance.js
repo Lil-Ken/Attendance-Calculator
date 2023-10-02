@@ -144,17 +144,15 @@ document.getElementById("calculate-btn").onclick = () => {
     calAttendance();
 
     if (attendance.toFixed(2) < 80)
-        attendance = `<span style= "color: #ff0800">${attendance.toFixed(2)}%</span>`
+        attendance = `<span style= "color: #ce0820">${attendance.toFixed(2)}%</span>`
+    else if (!(attendance >= 0 && attendance <=100)) attendance = "no attendance for you"
     else attendance = `<span style= "color: #8add43">${attendance.toFixed(2)}%`
-    
+
     document.body.innerHTML = `
         <div id= "display">
-            <ul id="list">
-                <li><b>name:</b> ${student1.name}</li>
-                <li><b>Subject name:</b> ${student1.courseName}</li>
-                <p>Your attendance is ${attendance}</p>
-                <p>this ugly design is modifying</p>
-            </ul>
+            <h3>${student1.courseName}</h3>
+            <p>Your attendance is ${attendance}</p>
+            
             <a href= ""><button id="back-btn">BACK</button></a>
         </div>
         <footer id="footer">
