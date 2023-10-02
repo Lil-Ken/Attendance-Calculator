@@ -116,6 +116,13 @@ input[type="checkbox"] {
     color: #e73895;
 } 
 
+#back-btn{
+    min-width: 200px;
+    max-height: 50px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
 a{
     display: block;
     margin: auto;
@@ -135,31 +142,24 @@ a{
     min-width: 600px;
     margin: auto;
     background-color: #404040dd;
-    padding: 20px;
+    padding: 0px 20px;
     padding-bottom: 1px;
     border-radius: 6px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     margin-top: 15%;
+    text-align: center;
 }
 
 #display a{
     text-decoration: none;
 }
 
-#list{
-    list-style: none;
-    margin-bottom: 20px;
-    color: #46cfa4;
-}
 
 
-#list p,
-#list b{
-    color: #f9b593;
-}
-
-.clicked{
-    height: 200vh;
+h3{
+    font-size: 150%;
+    color: #ff849c;
+    padding: 10px;
 }
 
 #info:hover,
