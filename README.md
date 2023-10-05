@@ -1,2 +1,4 @@
 # Attendance-Calculator
-This is a basic attendance Calculator website that I made. I'll improve this website to make it better and more functional.
+This is a basic attendance Calculator website that I made.
+I use html, css, javascipt to build this website.
+Javascipt provided a calculator about count attendance rate.
