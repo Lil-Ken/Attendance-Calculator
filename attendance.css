@@ -6,7 +6,7 @@
     font-size: 25px;
 }
 body {
-    font-family: Arial, sans-serif;
+    font-family:'Courier New', Courier, monospace;
     color: #f5fffa;
     background: linear-gradient(#ff9eb0bb,#ffcbd5, #ffb7d7, #ff9eb0bb);
     overflow-y: scroll;
